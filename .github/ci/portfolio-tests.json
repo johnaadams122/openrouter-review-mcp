@@ -1,0 +1,185 @@
+{
+  "commands": [
+    {
+      "args": [
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "id": "dependencies",
+      "outputs": [],
+      "phase": "setup",
+      "timeoutSeconds": 300,
+      "tool": "npm"
+    },
+    {
+      "args": [
+        "--test",
+        "--test-concurrency=4",
+        "--test-timeout=180000",
+        "tests/openrouter-classifier-hardening.test.mjs",
+        "tests/openrouter-dispatch-outcome-store.test.mjs",
+        "tests/openrouter-ollama-client.test.mjs",
+        "tests/openrouter-pending-health-verdict-store.test.mjs",
+        "tests/openrouter-preflight-context-store.test.mjs",
+        "tests/openrouter-review-above-reservation.test.mjs",
+        "tests/openrouter-review-alert-store.test.mjs",
+        "tests/openrouter-review-alert-wiring.test.mjs",
+        "tests/openrouter-review-always-connect-stdio.test.mjs",
+        "tests/openrouter-review-approval.test.mjs",
+        "tests/openrouter-review-autonomy.test.mjs",
+        "tests/openrouter-review-captured-result-recovery.test.mjs",
+        "tests/openrouter-review-completion-health.test.mjs",
+        "tests/openrouter-review-completion-reason.test.mjs",
+        "tests/openrouter-review-contract.test.mjs",
+        "tests/openrouter-review-ctrl-signal-log.test.mjs",
+        "tests/openrouter-review-daily-allowance.test.mjs",
+        "tests/openrouter-review-dispatch-adapter.test.mjs",
+        "tests/openrouter-review-dispatch-config.test.mjs",
+        "tests/openrouter-review-dispatch-health-store.test.mjs",
+        "tests/openrouter-review-dispatch-launcher.test.mjs",
+        "tests/openrouter-review-dispatch-worker.test.mjs",
+        "tests/openrouter-review-dispatch.test.mjs",
+        "tests/openrouter-review-engine-alerts.test.mjs",
+        "tests/openrouter-review-engine-arming.test.mjs",
+        "tests/openrouter-review-engine-cross-lease-dedup.test.mjs",
+        "tests/openrouter-review-engine-lease-bound-dispatch.test.mjs",
+        "tests/openrouter-review-engine-shutdown.test.mjs",
+        "tests/openrouter-review-engine.test.mjs",
+        "tests/openrouter-review-extra-protected-terms-config.test.mjs",
+        "tests/openrouter-review-finalize.test.mjs",
+        "tests/openrouter-review-health-claim-residuals.test.mjs",
+        "tests/openrouter-review-health-verdict-claim.test.mjs",
+        "tests/openrouter-review-hook-nudge.test.mjs",
+        "tests/openrouter-review-key-status-adapter.test.mjs",
+        "tests/openrouter-review-lease-lock-reliability.test.mjs",
+        "tests/openrouter-review-lease-process-liveness.test.mjs",
+        "tests/openrouter-review-lease-release-cleanup.test.mjs",
+        "tests/openrouter-review-lease.test.mjs",
+        "tests/openrouter-review-ledger-accounting.test.mjs",
+        "tests/openrouter-review-mcp-shutdown-exit.test.mjs",
+        "tests/openrouter-review-mcp-stdio.test.mjs",
+        "tests/openrouter-review-owner-handle.test.mjs",
+        "tests/openrouter-review-ownership-coordinator.test.mjs",
+        "tests/openrouter-review-ownership-release-barrier.test.mjs",
+        "tests/openrouter-review-parallel-dispatch.test.mjs",
+        "tests/openrouter-review-preflight.test.mjs",
+        "tests/openrouter-review-registry.test.mjs",
+        "tests/openrouter-review-repeat-authorization-judge.test.mjs",
+        "tests/openrouter-review-repeat-authorization-ledger-check.test.mjs",
+        "tests/openrouter-review-reserve-phase.test.mjs",
+        "tests/openrouter-review-result-store.test.mjs",
+        "tests/openrouter-review-safe-error-detail.test.mjs",
+        "tests/openrouter-review-schema.test.mjs",
+        "tests/openrouter-review-scrub-mapping-cleanup.test.mjs",
+        "tests/openrouter-review-source.test.mjs",
+        "tests/openrouter-review-task-completion-nudge.test.mjs",
+        "tests/openrouter-scrub-cleanup-sweep.test.mjs",
+        "tests/openrouter-scrub-engine.test.mjs",
+        "tests/openrouter-scrub-extra-protected-terms.test.mjs",
+        "tests/openrouter-scrub-integration.test.mjs",
+        "tests/openrouter-scrub-mapping-store.test.mjs",
+        "tests/openrouter-scrub-patterns.test.mjs",
+        "tests/openrouter-shared-contracts.test.mjs",
+        "tests/openrouter-shared-ledger.test.mjs",
+        "tests/openrouter-shared-policy.test.mjs",
+        "tests/openrouter-shared-preflight-reclaim.test.mjs"
+      ],
+      "id": "unit",
+      "outputs": [],
+      "parser": "node",
+      "phase": "test",
+      "timeoutSeconds": 600,
+      "tool": "node"
+    }
+  ],
+  "declaredSkips": [],
+  "mockedServices": [
+    {
+      "fixtures": [
+        "tests/fixtures/openrouter-review/fake-dispatch-worker.mjs",
+        "tests/openrouter-review-dispatch-worker.test.mjs",
+        "tests/openrouter-review-dispatch-adapter.test.mjs",
+        "tests/openrouter-review-dispatch.test.mjs",
+        "tests/openrouter-review-engine.test.mjs",
+        "tests/openrouter-review-engine-alerts.test.mjs",
+        "tests/openrouter-review-engine-arming.test.mjs",
+        "tests/openrouter-review-engine-cross-lease-dedup.test.mjs",
+        "tests/openrouter-review-engine-lease-bound-dispatch.test.mjs",
+        "tests/openrouter-review-engine-shutdown.test.mjs",
+        "tests/openrouter-review-parallel-dispatch.test.mjs",
+        "tests/openrouter-review-autonomy.test.mjs",
+        "tests/openrouter-review-completion-health.test.mjs",
+        "tests/openrouter-review-completion-reason.test.mjs",
+        "tests/openrouter-review-scrub-mapping-cleanup.test.mjs",
+        "tests/openrouter-review-captured-result-recovery.test.mjs",
+        "tests/openrouter-review-health-claim-residuals.test.mjs",
+        "tests/openrouter-review-health-verdict-claim.test.mjs",
+        "tests/openrouter-review-mcp-stdio.test.mjs",
+        "tests/openrouter-scrub-integration.test.mjs"
+      ],
+      "method": "Tests replace the dispatch adapter with the synthetic fake dispatch worker or inline stub adapters; the real PowerShell worker only runs with an already-expired deadline, so it exits before reading a credential or opening a connection.",
+      "service": "OpenRouter chat completions API"
+    },
+    {
+      "fixtures": [
+        "tests/openrouter-review-key-status-adapter.test.mjs",
+        "tests/openrouter-review-engine-alerts.test.mjs",
+        "tests/openrouter-review-parallel-dispatch.test.mjs"
+      ],
+      "method": "Tests inject a fake process runner or a fake key-status probe that returns synthetic limit JSON; the key-status script is never executed.",
+      "service": "OpenRouter key status endpoint"
+    },
+    {
+      "fixtures": [
+        "tests/openrouter-ollama-client.test.mjs",
+        "tests/openrouter-classifier-hardening.test.mjs",
+        "tests/openrouter-review-repeat-authorization-judge.test.mjs",
+        "tests/openrouter-scrub-engine.test.mjs",
+        "tests/openrouter-scrub-integration.test.mjs",
+        "tests/openrouter-review-engine.test.mjs",
+        "tests/openrouter-review-mcp-stdio.test.mjs",
+        "tests/openrouter-review-always-connect-stdio.test.mjs",
+        "tests/openrouter-scrub-extra-protected-terms.test.mjs"
+      ],
+      "method": "Unit tests pass a fake fetch function or a fake classifier client; real entry-point tests start a loopback-only HTTP stand-in on an ephemeral port and point the server at it.",
+      "service": "Local Ollama classifier"
+    },
+    {
+      "fixtures": [
+        "tests/openrouter-review-approval.test.mjs",
+        "tests/openrouter-review-autonomy.test.mjs",
+        "tests/openrouter-review-engine.test.mjs",
+        "tests/openrouter-review-completion-reason.test.mjs",
+        "tests/openrouter-review-mcp-stdio.test.mjs"
+      ],
+      "method": "Tests inject a fake process spawner or a fake approval adapter and write synthetic approval result files; no console window is opened and no approval phrase is typed.",
+      "service": "Operator approval console window"
+    },
+    {
+      "fixtures": [
+        "tests/openrouter-review-dispatch-launcher.test.mjs",
+        "tests/openrouter-review-dispatch-adapter.test.mjs"
+      ],
+      "method": "Launcher tests inspect the script source and run one launcher call that finds an existing outcome and exits before registering a task, confirmed by a read-only task query; adapter tests replace the launcher process with a fake runner.",
+      "service": "Windows Task Scheduler"
+    },
+    {
+      "fixtures": [
+        "tests/openrouter-review-dispatch.test.mjs"
+      ],
+      "method": "Tests never read a stored credential; one test protects and unprotects a synthetic placeholder blob in a temporary folder with the current-user DPAPI call to check that the worker preamble loads it.",
+      "service": "DPAPI-protected OpenRouter credential"
+    },
+    {
+      "fixtures": [
+        "tests/openrouter-review-hook-nudge.test.mjs",
+        "tests/openrouter-review-task-completion-nudge.test.mjs"
+      ],
+      "method": "Hook tests pipe synthetic PostToolUse JSON payloads into the hook scripts and read their standard output; state goes to a temporary folder.",
+      "service": "Claude Code hook events"
+    }
+  ],
+  "schema": "portfolio-test-plan-v1"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "openrouter-review-mcp",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Human-supervised OpenRouter review MCP server with explicitly authorized dispatch.",
+  "scripts": {
+    "test": "node --test --test-concurrency=4 --test-timeout=180000 --test-reporter=tap tests/*.test.mjs",
+    "mcp:start": "node tools/openrouter-review-mcp-server.mjs",
+    "test:mcp": "node --test tests/openrouter-review-mcp-stdio.test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "zod": "4.4.3"
+  }
+}
